@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Details Form</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./main.js"></script>
+    <style>
+      form {
+        margin: 20px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+          sans-serif;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      input,
+      select {
+        width: 300px;
+        padding: 10px;
+        border: 1px solid gray;
+        border-radius: 5px;
+        transition: box-shadow 0.15s;
+      }
+
+      input:hover {
+        box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+      }
+
+      input[type='checkbox'] {
+        width: 14px;
+      }
+
+      input[type='button'] {
+        background-color: blue;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        padding: 10px;
+        width: 300px;
+        transition: box-shadow 0.15s, background-color 0.15s;
+      }
+
+      input[type='button']:hover {
+        background-color: rgb(6, 6, 87);
+        box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+      }
+
+      input[type='button']:active {
+        background-color: gray;
+      }
+
+      span {
+        color: red;
+        font-weight: bold;
+      }
+
+      input[type='radio'] {
+        margin-right: 10px;
+        width: auto;
+      }
+
+      table {
+        margin-top: 20px;
+        border-collapse: collapse;
+        width: 100%;
+        border: 1px solid gray;
+      }
+
+      th,
+      td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid gray;
+        border-collapse: collapse;
+      }
+
+      th {
+        background-color: white;
+        border-collapse: collapse;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>
+      <form id="employeeForm">
+        <h1>Employee Details Form</h1>
+
+        <label for="employeeID">Employee ID (at least 5 characters):</label>
+        <input type="text" id="empid" name="employeeID" />
+        <span id="spanEmpid"></span>
+        <br /><br />
+
+        <label for="employeeName">Employee Name:</label>
+        <input type="text" id="empname" name="employeeName" />
+        <span id="spanEmpname"></span>
+        <br /><br />
+
+        <label for="age">Age:</label>
+        <input type="text" id="age" name="age" />
+        <span id="spanAge"></span>
+        <br /><br />
+
+        <label>Gender</label>
+
+        <label for="male">
+          <input type="radio" id="male" name="gender" value="male" />
+          Male
+        </label>
+
+        <label for="female">
+          <input type="radio" id="female" name="gender" value="female" />
+          Female
+        </label>
+
+        <span id="spanGender"></span>
+
+        <label for="designation">Designation:</label>
+        <input type="text" id="designation" name="designation" />
+        <span id="spanDesignation"></span>
+        <br /><br />
+
+        <label for="salary">Salary:</label>
+        <input type="text" id="salary" name="salary" maxlength="6" />
+        <span id="spanSalary"></span>
+        <br /><br />
+
+        <label for="location">Location:</label>
+        <select id="location" name="location">
+          <option value="" disabled selected>City</option>
+          <option value="Ahmedabad">Ahmedabad</option>
+          <option value="Calcutta">Calcutta</option>
+          <option value="Delhi">Delhi</option>
+          <option value="Mumbai">Mumbai</option>
+        </select>
+        <span id="spanLocation"></span>
+        <br /><br />
+
+        <label for="email">Email ID (proper format):</label>
+        <input type="text" id="email" name="email" />
+        <span id="spanEmail"></span>
+        <br /><br />
+
+        <label for="joinDate">Date of Joining:</label>
+        <input type="date" id="joiningDate" name="joinDate" />
+        <span id="spanJoiningdate"></span>
+        <br /><br />
+
+        <label for="contactNumber">Contact Number:</label>
+        <input type="text" id="contact" name="contactNumber" />
+        <span id="spanContact"></span>
+        <br /><br />
+
+        <input type="button" value="submit" id="btnSubmit" />
+      </form>
+    </div>
+  </body>
+</html>
